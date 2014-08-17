@@ -23,8 +23,8 @@ gem 'coffee-rails', '~> 4.0'
 gem 'uglifier', require: false
 
 gem 'jquery-rails'
-gem 'omniauth', '>= 1.1.0'
-gem 'omniauth-github'
+gem 'omniauth', '>= 1.2.2'
+gem 'omniauth-ldap'
 gem 'bootstrap-sass', '>= 2.3.2', '< 3.0'
 gem 'coderay'
 gem 'kaminari'

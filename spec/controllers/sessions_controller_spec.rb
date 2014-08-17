@@ -4,9 +4,9 @@ describe SessionsController do
 
   before(:each) do
     OmniAuth.config.test_mode = true
-    OmniAuth.config.mock_auth[:github] = {
+    OmniAuth.config.mock_auth[:ldap] = {
         'uid' => '12345',
-        'provider' => 'github',
+        'provider' => 'ldap',
         'info' => {
           'name' => 'Dingding Ye'
         }
@@ -16,7 +16,7 @@ describe SessionsController do
   describe "GET 'new'" do
     it "redirectes users to authentication" do
       get 'new'
-      assert_redirected_to '/auth/github'
+      assert_redirected_to '/auth/ldap'
     end
   end
 

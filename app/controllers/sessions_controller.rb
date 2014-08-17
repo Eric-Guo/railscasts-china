@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:create]
 
   def new
-    redirect_to '/auth/github'
+    redirect_to '/auth/ldap'
   end
 
   def create

@@ -1,20 +1,17 @@
 lock '~> 3.4.0'
 
-set :application, "railscasts-china"
-set :repo_url,  "git://github.com/pragmaticly/railscasts-china.git"
+set :application, 'cast'
+set :repo_url, 'https://github.com/Eric-Guo/railscasts-china'
 
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
-set :deploy_via, :remote_cache
-set :deploy_to, "/var/www/railscasts-china"
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
+set :branch, 'cast'
 
 # Default deploy_to directory is /var/www/my_app
-
-# Default value for :scm is :git
-# set :scm, :git
+set :deploy_to, '/home/cast'
 
 # Default value for :format is :pretty
 # set :format, :pretty
@@ -46,7 +43,7 @@ namespace :deploy do
       # Your restart mechanism here, for example:
       execute :touch, release_path.join('tmp/restart.txt')
       execute :cp, release_path.join('vendor/assets/javascripts/*.swf'), release_path.join('public/assets/')
-      #execute :curl, '-s -D - cast.sandisk.com -o /dev/null'
+      execute :curl, '-s -D - cast.sandisk.com -o /dev/null'
     end
   end
 

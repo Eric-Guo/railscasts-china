@@ -5,8 +5,12 @@ source 'https://rubygems.org'
 
 gem 'rails', '~> 4.2.6'
 # gem 'mysql2'
-gem 'sqlite3'
-gem 'sqlite3_ar_regexp', '~> 2.0'
+# gem 'sqlite3'
+# gem 'sqlite3_ar_regexp', '~> 2.0'
+
+# Oracle adapter
+gem 'ruby-oci8', '~> 2.2.1'
+gem 'activerecord-oracle_enhanced-adapter', '~> 1.6.6'
 
 # Gems used only for assets and not required
 # in production environments by default.

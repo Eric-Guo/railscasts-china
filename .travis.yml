@@ -16,3 +16,7 @@ before_script:
 
 git:
   depth: 10
+
+branches:
+  except:
+    - cast

@@ -21,7 +21,7 @@ production:
   adapter: oracle_enhanced
   database: SPMS
   username: cast_prod
-  password: no_create
+  password: <%= ENV["CAST_PROD_PWD"] %>
   pool: 5
   timeout: 5000
 

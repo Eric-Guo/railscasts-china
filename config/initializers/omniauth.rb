@@ -13,4 +13,5 @@ Rails.application.config.middleware.use OmniAuth::Strategies::LDAP,
     :base => "DC=sdcorp,DC=global,DC=sandisk,DC=com",
     :uid => 'employeeid',
     :bind_dn => 'MES Service',
-    :password => ''
+    :password => ENV["MESSERVICE_PWD"]
+

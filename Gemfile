@@ -4,7 +4,9 @@ HOST_OS = RbConfig::CONFIG['host_os']
 source 'https://rubygems.org'
 
 gem 'rails', '~> 4.2.6'
-gem 'mysql2'
+# gem 'mysql2'
+gem 'sqlite3'
+gem 'sqlite3_ar_regexp', '~> 2.0'
 
 # Gems used only for assets and not required
 # in production environments by default.

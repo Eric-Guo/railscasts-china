@@ -6,17 +6,12 @@ rvm:
 
 script: bundle exec rspec
 
-services:
-  - mysql
-
-
 install:
   - "travis_retry bundle config build.nokogiri --use-system-libraries"
   - "travis_retry bundle install --retry 3"
 
 before_script:
-  - cp config/database.yml.mysql2 config/database.yml
-  - mysql -e 'create database `railscasts-china_test`;'
+  - cp config/database.yml.example config/database.yml
   - bundle exec rake db:migrate
 
 git:

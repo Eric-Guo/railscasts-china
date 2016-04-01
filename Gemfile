@@ -14,7 +14,7 @@ gem 'coffee-rails', '~> 4.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', :platforms => :ruby
 
-gem 'uglifier', '~> 2.1', require: false
+gem 'uglifier', require: false
 
 gem 'jquery-rails'
 gem 'omniauth', '>= 1.1.0'
@@ -41,7 +41,7 @@ end
 
 group :development do
   # Use Capistrano for deployment
-  gem 'capistrano', '~> 3.2'
+  gem 'capistrano', '~> 3.4'
   gem 'capistrano-rails', '~> 1.1'
 
   gem 'quiet_assets'

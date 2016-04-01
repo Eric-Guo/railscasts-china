@@ -6,12 +6,12 @@ set :rvm_type, :system
 # is considered to be the first unless any hosts have the primary
 # property set.  Don't declare `role :all`, it's a meta role.
 
-role :app, %w{cast@cast.sandisk.com}
-role :web, %w{cast@cast.sandisk.com}
-role :db,  %w{cast@cast.sandisk.com}
+role :app, %w(cast@cvprcsip02)
+role :web, %w(cast@cvprcsip02)
+role :db,  %w(cast@cvprcsip02)
 
-server 'cast.sandisk.com', user: 'cast', roles: %w{web},
-  ssh_options: {forward_agent: false, auth_methods: %w(password), password: 'castps5d'}
+server 'cvprcsip02', user: 'cast', roles: %w(web),
+                     ssh_options: { forward_agent: false, auth_methods: %w(password), password: 'castps5d' }
 
 # Extended Server Syntax
 # ======================

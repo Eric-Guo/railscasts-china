@@ -40,8 +40,6 @@ namespace :deploy do
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
-      # Your restart mechanism here, for example:
-      execute :touch, release_path.join('tmp/restart.txt')
       execute :cp, release_path.join('vendor/assets/javascripts/*.swf'), release_path.join('public/assets/')
       execute :curl, '-s -D - cast.sandisk.com -o /dev/null'
     end
